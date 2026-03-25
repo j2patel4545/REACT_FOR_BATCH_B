@@ -1,25 +1,26 @@
-function App(){
+import React from 'react'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
-  let a = "Digifarm"
-  const navoptions = ["contact","about","feedback"]
+function App() {
+  return (
+   
+      <BrowserRouter>
+      <Navbar/>
+          <Routes>
+              <Route element="Hello World" path='/' />
+              <Route element={<Home/>} path='/abc' />
+              <Route element={<About/>} path='/pqr'/>
+              <Route element={<Home/>} path='/hello'/>
 
-
-  return(
-    <div className="w-screen flex justify-center h-10 text-amber-50 bg-black">
-      <nav className=" w-[80%] flex justify-between items-center bg-black">
-        <div>LOGO</div>
-        <div className="flex gap-4">
-          {navoptions.map((z)=>{
-            return(
-              
-              <h2>{z}</h2>
-              
-            )
-          })}
-        </div>
-
-      </nav>
-    </div>
+          </Routes>
+          <Footer/>
+      </BrowserRouter>
+ 
   )
 }
-export default App;
+
+export default App

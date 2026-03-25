@@ -106,5 +106,4 @@ Frontend Developer | MERN Stack | UI/UX Enthusiast
 Keep learning, keep building, and make this repo **full of green commits 🌱**
 
 ---
-
 🔥 Happy Coding Interns!
